@@ -1,5 +1,9 @@
 #Upcoming Release
 
+**Other:**
+
+- Set CocoaPods documentation URL - #56 @agentk
+
 #0.2.4
 
 *Released: 01/23/2015*
