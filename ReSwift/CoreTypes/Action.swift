@@ -67,6 +67,11 @@ extension StandardAction: Coding {
 ///     for your custom action types.
 public protocol StandardActionConvertible: Action {
     /**
+     A unique identifier for the `StandardAction` to be serialized.
+     */
+    static var identifier: String { get }
+
+    /**
      Within this initializer you need to use the payload from the `StandardAction` to configure the
      state of your custom action type.
 

@@ -28,7 +28,7 @@ struct TestStringAppState: StateType {
 struct SetValueAction: StandardActionConvertible {
 
     let value: Int
-    static let type = "SetValueAction"
+    static let identifier = "SetValueAction"
 
     init (_ value: Int) {
         self.value = value
@@ -39,7 +39,7 @@ struct SetValueAction: StandardActionConvertible {
     }
 
     func toStandardAction() -> StandardAction {
-        return StandardAction(type: SetValueAction.type, payload: ["value": value],
+        return StandardAction(type: SetValueAction.identifier, payload: ["value": value],
                                 isTypedAction: true)
     }
 
@@ -48,7 +48,7 @@ struct SetValueAction: StandardActionConvertible {
 struct SetValueStringAction: StandardActionConvertible {
 
     var value: String
-    static let type = "SetValueStringAction"
+    static let identifier = "SetValueStringAction"
 
     init (_ value: String) {
         self.value = value
@@ -59,7 +59,7 @@ struct SetValueStringAction: StandardActionConvertible {
     }
 
     func toStandardAction() -> StandardAction {
-        return StandardAction(type: SetValueStringAction.type, payload: ["value": value],
+        return StandardAction(type: SetValueStringAction.identifier, payload: ["value": value],
                                 isTypedAction: true)
     }
 
